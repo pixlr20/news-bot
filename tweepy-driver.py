@@ -10,6 +10,7 @@ q = "from:@nytimes"
 results = api.search(q=q, result_type="recent")
 news = list()
 for r in results:
+    print(str(r._json) + "\n\n\n\n\n\n\n\n\n\n\n\n")
     tweet = dict(r._json)['entities']['urls']
     try:
         news.append(dict(tweet[0])['url'])
